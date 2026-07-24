@@ -26,11 +26,13 @@ public sealed class ConversionService
     /// <summary>Converts a CDA XML string to a serialised FHIR R4 Bundle (JSON by default).</summary>
     public ConversionResult Convert(string cdaXml, string format = "json")
     {
-        _logger.LogInformation("Starting CDA-to-FHIR conversion, format={Format}", format);
+        // Validate format to prevent log injection
+        var safeFormat = format is "json" or "xml" ? format : "json";
+        _logger.LogInformation("Starting CDA-to-FHIR conversion, format={Format}", safeFormat);
 
         Bundle bundle = _mapper.Map(cdaXml);
 
-        bool isXml = format.Equals("xml", StringComparison.OrdinalIgnoreCase);
+        bool isXml = safeFormat.Equals("xml", StringComparison.OrdinalIgnoreCase);
 
         string serialised;
         string contentType;

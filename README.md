@@ -14,10 +14,10 @@ A reusable, enterprise-ready adapter for converting **HL7 CDA R2** clinical docu
 |------|-----|
 | Standards-based CDA → FHIR R4 bridge | Declarative mappings per EHDS profile |
 | EHDS-aligned profiles | Composition tagged with `http://hl7.eu/fhir/ehds/StructureDefinition/composition-eu-ehds` |
-| REST API | Spring Boot (Java) / ASP.NET Core (·NET) |
-| CLI | Picocli (Java) / built-in arg parser (·NET) |
-| Code quality | Checkstyle, SpotBugs, OWASP Dependency Check (Java) / NuGet audit (·NET) |
-| FHIR validation | HAPI FHIR validator (Java) / Firely SDK (·NET) |
+| REST API | Spring Boot (Java) / ASP.NET Core (.NET) |
+| CLI | Picocli (Java) / built-in arg parser (.NET) |
+| Code quality | Checkstyle, SpotBugs, OWASP Dependency Check (Java) / NuGet audit (.NET) |
+| FHIR validation | HAPI FHIR validator (Java) / Firely SDK (.NET) |
 | CI/CD | GitHub Actions with automated build, test, and security checks |
 
 ---

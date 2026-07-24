@@ -38,11 +38,13 @@ public sealed class ConversionController : ControllerBase
         [FromBody] string cdaXml,
         [FromQuery] string format = "json")
     {
-        _logger.LogInformation("Received CDA conversion request, format={Format}", format);
+        // Sanitise user-provided format to prevent log injection
+        var safeFormat = format is "json" or "xml" ? format : "json";
+        _logger.LogInformation("Received CDA conversion request, format={Format}", safeFormat);
 
         try
         {
-            var result = _conversionService.Convert(cdaXml, format);
+            var result = _conversionService.Convert(cdaXml, safeFormat);
             return Content(result.FhirBundle, result.ContentType);
         }
         catch (CdaParseException ex)
