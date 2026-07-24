@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CdaToFhirAdapter.Api/CdaToFhirAdapter.Api.csproj" />
+    <Project Path="src/CdaToFhirAdapter.Cli/CdaToFhirAdapter.Cli.csproj" />
+    <Project Path="src/CdaToFhirAdapter.Core/CdaToFhirAdapter.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CdaToFhirAdapter.Tests/CdaToFhirAdapter.Tests.csproj" />
+  </Folder>
+</Solution>

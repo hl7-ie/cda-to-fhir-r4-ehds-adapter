@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cda-to-fhir-adapter
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    ie.hl7.cda.fhir: INFO
+    ca.uhn.fhir: WARN

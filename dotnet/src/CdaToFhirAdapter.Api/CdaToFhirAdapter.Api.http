@@ -1,0 +1,6 @@
+@CdaToFhirAdapter.Api_HostAddress = http://localhost:5072
+
+GET {{CdaToFhirAdapter.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
