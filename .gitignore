@@ -1,0 +1,29 @@
+# Java build artifacts
+java/target/
+java/*.log
+
+# Maven local repo (should not be committed)
+.m2/
+
+# .NET build artifacts
+dotnet/**/bin/
+dotnet/**/obj/
+dotnet/**/*.user
+dotnet/**/*.suo
+dotnet/.vs/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.DS_Store
+
+# Test results
+*.trx
+TestResults/
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
